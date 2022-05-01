@@ -1,7 +1,7 @@
 let inputEl = document.getElementById('unit-input');
-let volumeText = document.getElementById('volume');
-let massText = document.getElementById('mass');
-let lengthText = document.getElementById('length');
+let volume = document.getElementById('volume');
+let mass = document.getElementById('mass');
+let length = document.getElementById('length');
 
 let feet = 0
 let litres = 0
@@ -24,18 +24,18 @@ let updateGUI = () => {
         resetGUI()
     } else {
         convert(inputEl.value)
-        lengthText.textContent = `${inputEl.value} meters = ${feet} feet | ${inputEl.value} feet = ${meters} meters`
-        volumeText.textContent = `${inputEl.value} litres = ${gallons} gallons | ${inputEl.value} gallons = ${litres} litres`
-        massText.textContent = `${inputEl.value} kilos = ${pounds} pounds | ${inputEl.value} pounds = ${kilograms} kilos`
+        length.textContent = `${inputEl.value} meters = ${feet} feet | ${inputEl.value} feet = ${meters} meters`
+        volume.textContent = `${inputEl.value} litres = ${gallons} gallons | ${inputEl.value} gallons = ${litres} litres`
+        mass.textContent = `${inputEl.value} kilos = ${pounds} pounds | ${inputEl.value} pounds = ${kilograms} kilos`
     }
 }
 
 
 let resetGUI = () => {
     convert(inputEl.placeholder)
-    lengthText.textContent = `${inputEl.placeholder} meters = ${feet} feet | ${inputEl.placeholder} feet = ${meters} meters`
-    volumeText.textContent = `${inputEl.placeholder} litres = ${gallons} gallons | ${inputEl.placeholder} gallons = ${litres} litres`
-    massText.textContent = `${inputEl.placeholder} kilos = ${pounds} pounds | ${inputEl.placeholder} pounds = ${kilograms} kilos`
+    length.textContent = `${inputEl.placeholder} meters = ${feet} feet | ${inputEl.placeholder} feet = ${meters} meters`
+    volume.textContent = `${inputEl.placeholder} litres = ${gallons} gallons | ${inputEl.placeholder} gallons = ${litres} litres`
+    mass.textContent = `${inputEl.placeholder} kilos = ${pounds} pounds | ${inputEl.placeholder} pounds = ${kilograms} kilos`
 };
 
 inputEl.addEventListener('input', updateGUI)
