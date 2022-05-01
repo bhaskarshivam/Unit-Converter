@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <h1 class="head">Metric/Imperial unit conversion</h1>
+            <input id="unit-input" type="number" name="unit" min="1" placeholder="0">
+        </div>
+        <div>
+            <p class="len">Length (Meter/Feet)</p>
+            <p class="val1" id="length" onload="len()"></p>
+        </div>
+        <div>
+            <p class="vol">Volume (Litres/Gallons)</p>
+            <p class="val2" id="volume" onload="vol()"></p>
+        </div>
+        <div>
+            <p class="mass">Mass (Kilograms/Pounds)</p>
+            <p class="val3" id="mass" onload="mass()"></p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
